@@ -1283,7 +1283,7 @@ Voltando a substituir, mais uma vez, os valores na lei da recursividade mútua
 \end{eqnarray*}
 
 
-split (split h g) f = cataNat ( split (split ([1,aux]) ([1,p1.p1]) ) [0,p2.p1] )
+| split (split h g) f | = | cata ( split (split ([1,aux]) ([1,p1.p1]) ) [0,p2.p1] |)
 
 
 \just\equiv{ lei da troca }
@@ -1302,7 +1302,7 @@ split (split h g) f = cataNat ( split (split ([1,aux]) ([1,p1.p1]) ) [0,p2.p1] )
 \just\equiv{ definição de for b i }
 
 
-| split (split h g) f | =  |for split (split aux (p1.p1) ) p2.p1 ((1,1),0) |
+| split (split h g) f | = | for split (split aux (p1.p1) ) (p2.p1) ((1,1),0) |
 
 
 
