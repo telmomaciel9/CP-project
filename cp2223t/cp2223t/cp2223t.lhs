@@ -1116,25 +1116,224 @@ Valoriza-se a escrita de \emph{pouco} código que corresponda a soluções
 simples e elegantes.
 
 \subsection*{Problema 1}
-Funções auxiliares pedidas:
+
+
+Começando por desenvolver a lei da recursividade mútua temos então
+
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases}
+        | h . in | = | j . F split (split h g) f | \\
+        | g . in | = | k . F split (split h g) f | \\
+        | f . in | = | l . F split (split h g) f | \\
+      \end{cases}\
+\end{cases}
+\end{eqnarray*}
+
+\just\equiv{ | split (split h g) f | = cataNat ( split (split j k) l )}
+
+Desenvolvendo mais ainda
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases} 
+        | h . const 0 | = | j1 | \\
+        | h . succ | = | j2 . split (split h g) j |
+      \end{cases}\
+      \begin{cases}
+        | g . const 0 | = | k1 | \\
+        | g . succ | = | k2 . split (split h g) j |     
+      \end{cases}\
+      \begin{cases}
+        | f . const 0 | = | l1 | \\
+        | f . succ | = | l2 . split (split h g) j |
+      \end{cases}
+\end{cases}
+\end{eqnarray*}
+
+\just\equiv{ | split (split h g) f | = cataNat ( split (split ([j1,j2]) ([k1,k2]) ) [l1,l2] )}
+
+O que por fim nos leva a 
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases} 
+        | h 0 | = | a | \\
+        | h (n + 1) | = | j2 ((h n,g n), f n) |
+      \end{cases}\
+      \begin{cases}
+        | g 0 | = | b | \\
+        | g (n + 1) | = | k2 ((h n,g n), f n) |     
+      \end{cases}\
+      \begin{cases}
+        | f 0 | = | c | \\
+        | f (n + 1) | = | l2 ((h n,g n), f n) |
+      \end{cases}
+\end{cases}
+\end{eqnarray*}
+
+\just\equiv{ | split (split h g) f | = cataNat ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )}
+
+
+Pegando na função original
+
+\begin{spec}
+f a b c 0 = 0
+f a b c 1 = 1
+f a b c 2 = 1
+f a b c (n+3) = a * f a b c (n+2) + b * f a b c (n+1) + c * f a b c n
+\end{spec}
+
+Podemos concluir que 
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases}
+        | g a b c n | = | f a b c (n + 1) | \\
+        | g a b c (n + 1) | = | f a b c (n + 2) | = | h a b c n | \\
+        | h a b c n | = | f a b c (n + 2) | \\
+        | h a b c (n + 1) | = | f a b c (n + 3) | = | h a b c n + g a b c n + f a b c n |  \\
+      \end{cases}\
+\end{cases}
+\end{eqnarray*}
+
+E substituindo valores obtemos
+
+\begin{spec}
+f a b c 0 = 0
+g a b c 0 = 1
+h a b c 0 = 1
+\end{spec}
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases}
+        | h a b c 0 | = | 1 | \\
+        | h a b c (n + 1) | = | a * h a b c n + b * g a b c n + c * f a b c n | 
+      \end{cases}\
+      \begin{cases}
+        | g a b c 0 | = | 1 | \\
+        | g a b c (n + 1) | = | h a b c n| 
+      \end{cases}\
+      \begin{cases}
+        | f a b c 0 | = | 0 | \\
+        | f a b c (n + 1) | = | g a b c n | 
+      \end{cases}
+\end{cases}
+\end{eqnarray*}
+
+
+
+Substituindo na lei da recursividade mútua temos que
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases}
+        | h a b c 0 | = | a | \\
+        | h a b c (n + 1) | = | h2 ((h a b c n, g a b c n), f a b c n) | 
+      \end{cases}\
+      \begin{cases}
+        | g a b c 0 | = | b | \\
+        | g a b c (n + 1) | = | k2 ((h a b c n, g a b c n), f a b c n) | 
+      \end{cases}\
+      \begin{cases}
+        | f a b c 0 | = | c | \\
+        | f a b c (n + 1) | = | l2 ((h a b c n, g a b c n), f a b c n) | 
+      \end{cases}
+\end{cases}
+\end{eqnarray*}
+
+\just\equiv{ | split (split h g) f | = cataNat ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )}
+
+
+Em que 
+
 \begin{code}
-loop = undefined
-initial = undefined
+a = 1
+h2 = aux a b c
+b = 1
+k2 = p1 . p1
+c = 0
+l2 = p2 . p1
+\end{code}
+
+Sendo que a função aux é a seguinte
+
+\begin{code}
+aux a b c ((h,g),f)= a * h + b * g + c * f 
+\end{code}
+
+
+Voltando a substituir, mais uma vez, os valores na lei da recursividade mútua
+
+\begin{eqnarray*}
+\begin{cases}
+      \begin{cases}
+        | h a b c 0 | = | 1 | \\
+        | h a b c (n + 1) | = | aux ((h a b c n, g a b c n), f a b c n) | 
+      \end{cases}\
+      \begin{cases}
+        | g a b c 0 | = | 1 | \\
+        | g a b c (n + 1) | = | p1.p1 ((h a b c n, g a b c n), f a b c n) | 
+      \end{cases}\
+      \begin{cases}
+        | f a b c 0 | = | 0 | \\
+        | f a b c (n + 1) | = | p2.p1 ((h a b c n, g a b c n), f a b c n) | 
+      \end{cases}
+\end{cases}
+\end{eqnarray*}
+
+
+split (split h g) f = cataNat ( split (split ([1,aux]) ([1,p1.p1]) ) [0,p2.p1] )
+
+
+\just\equiv{ lei da troca }
+
+
+split (split h g) f = cataNat ( [split (split 1 0) 0, split (split aux (p1.p1) ) p2.p1 ] )
+
+
+
+\just\equiv{ propriedade ficha 3 }
+
+
+split (split h g) f = cataNat ( [ ((1,1),0), split (split aux (p1.p1) ) p2.p1 ] )
+
+
+\just\equiv{ definição de for b i }
+
+
+split (split h g) f = for split (split aux (p1.p1) ) p2.p1 ((1,1),0)
+
+
+
+Concluindo, as funções auxiliares pedidas são as seguintes:
+\begin{code}
+loop a b c= split (split (aux a b c) (p1.p1) ) (p2.p1)
+initial = ((1,1),0)
 wrap = p2
 \end{code}
+
+
+
+
 
 \subsection*{Problema 2}
 Gene de |tax|:
 \begin{code}
 gene = auxi . out 
 
-auxi :: Either b (b,[b]) -> Either b (b,[[b]])
-auxi (Left x) = Left x 
-auxi (Right (a,(h:t)) ) = 
+auxi = undefined
 
+--auxi :: Either b (b,[b]) -> Either b (b,[[b]])
+--auxi (Left x) = Left x 
+--auxi (Right (a,(h:t)) ) = 
 
 \end{code}
+
 Função de pós-processamento:
+
 \begin{code}
 post = undefined
 \end{code}
@@ -1157,11 +1356,12 @@ present = undefined
 \subsection*{Problema 4}
 \subsubsection*{Versão não probabilística}
 Gene de |consolidate'|:
+
 \begin{code}
 
 cgene :: (Eq a, Num b) => Either () ((a,b), [(a,b)]) -> [(a,b)]
-cgene (i1 x) = []
-cgene (i2 ((x,y),xs)) = cgeneaux (x,y) xs
+cgene (Left x) = []
+cgene (Right ((x,y),xs)) = cgeneaux (x,y) xs
 
 cgeneaux :: (Eq a, Num b) => (a,b) -> [(a,b)] -> [(a,b)]
 cgeneaux (c,d) [] = [(c,d)]
