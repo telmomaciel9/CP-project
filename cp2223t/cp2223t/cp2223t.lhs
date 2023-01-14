@@ -1136,6 +1136,22 @@ Começando por desenvolver a lei da recursividade mútua temos então
 
 Desenvolvendo mais ainda
 
+%
+        |lcbr3(
+          lcbr(
+            h . const 0 = j1
+          )(
+            h . succ = j2 . split (split h g) j
+          )
+     )(lcbr(
+            g . const 0 = k1
+          )(
+            g . succ = k2 . split (split h g) j
+          )   
+     )|
+%
+
+
 \begin{eqnarray*}
 \begin{cases}
       \begin{cases} 
