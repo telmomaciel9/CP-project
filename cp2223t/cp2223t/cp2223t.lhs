@@ -1126,7 +1126,7 @@ Começando por desenvolver a lei da recursividade mútua temos então
   | h . in | = | j . F (split (split h g) f) | \\
   | g . in | = | k . F (split (split h g) f) | \\
   | f . in | = | l . F (split (split h g) f) | \\
-\end{cases}
+\end{cases}\\
 \end{eqnarray*}
 
 \just\equiv { | split (split h g) f | = | cata ( split (split j k) l ) | }
