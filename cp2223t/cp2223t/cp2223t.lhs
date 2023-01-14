@@ -1156,44 +1156,30 @@ Desenvolvendo mais ainda
      )|
 %
 
-
-\begin{eqnarray*}
-\begin{cases}
-      \begin{cases} 
-        | h . const 0 | = | j1 | \\
-        | h . succ | = | j2 . split (split h g) j |
-      \end{cases}\\
-      \begin{cases}
-        | g . const 0 | = | k1 | \\
-        | g . succ | = | k2 . split (split h g) j |   
-      \end{cases}\\
-      \begin{cases}
-        | f . const 0 | = | l1 | \\
-        | f . succ | = | l2 . split (split h g) j |
-      \end{cases}
-\end{cases}
-\end{eqnarray*}
-
 \equiv{ | split (split h g) f | = | cata ( split (split ([j1,j2]) ([k1,k2]) ) [l1,l2] ) |}
 
 O que por fim nos leva a 
 
-\begin{eqnarray*}
-\begin{cases}
-      \begin{cases} 
-        | h 0 | = | a | \\
-        | h (n + 1) | = | j2 ((h n,g n), f n) |
-      \end{cases}\
-      \begin{cases}
-        | g 0 | = | b | \\
-        | g (n + 1) | = | k2 ((h n,g n), f n) |     
-      \end{cases}\
-      \begin{cases}
-        | f 0 | = | c | \\
-        | f (n + 1) | = | l2 ((h n,g n), f n) |
-      \end{cases}
-\end{cases}
-\end{eqnarray*}
+%
+        |lcbr3(
+          lcbr(
+            h 0  =  a
+          )(
+            h (n + 1)  =  j2 ((h n,g n), f n)
+          )
+     )(lcbr(
+            g 0  =  b
+          )(
+            g (n + 1)  =  k2 ((h n,g n), f n) 
+          )   
+     )(lcbr(
+            f 0  =  c  
+          )(
+            f (n + 1)  =  l2 ((h n,g n), f n)
+          )
+     )|
+%
+
 
 \equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
 
@@ -1218,6 +1204,18 @@ Podemos concluir que
 \end{cases}
 \end{eqnarray*}
 
+%
+        |lcbr4(
+          g a b c n  =  f a b c (n + 1)
+     )(
+          g a b c (n + 1)  =  f a b c (n + 2)  =  h a b c n
+     )(
+          h a b c n  =  f a b c (n + 2) 
+     )(
+          h a b c (n + 1)  =  f a b c (n + 3)  =  h a b c n + g a b c n + f a b c n
+     ) |
+%
+
 E substituindo valores obtemos
 
 \begin{spec}
@@ -1226,43 +1224,51 @@ g a b c 0 = 1
 h a b c 0 = 1
 \end{spec}
 
-\begin{eqnarray*}
-\begin{cases}
-      \begin{cases}
-        | h a b c 0 | = | 1 | \\
-        | h a b c (n + 1) | = | a * h a b c n + b * g a b c n + c * f a b c n | 
-      \end{cases}\
-      \begin{cases}
-        | g a b c 0 | = | 1 | \\
-        | g a b c (n + 1) | = | h a b c n| 
-      \end{cases}\
-      \begin{cases}
-        | f a b c 0 | = | 0 | \\
-        | f a b c (n + 1) | = | g a b c n | 
-      \end{cases}
-\end{cases}
-\end{eqnarray*}
+%
+        |lcbr3(
+          lcbr(
+            h a b c 0  =  1 
+          )(
+            h a b c (n + 1)  =  a * h a b c n + b * g a b c n + c * f a b c n
+          )
+     )(lcbr(
+            g a b c 0  = 1
+          )(
+            g a b c (n + 1)  =  h a b c n
+          )   
+     )(lcbr(
+            f a b c 0  =  0 
+          )(
+            f a b c (n + 1)  = g a b c n
+          )
+     )|
+%
+
 
 
 
 Substituindo na lei da recursividade mútua temos que
 
-\begin{eqnarray*}
-\begin{cases}
-      \begin{cases}
-        | h a b c 0 | = | a | \\
-        | h a b c (n + 1) | = | h2 ((h a b c n, g a b c n), f a b c n) | 
-      \end{cases}\
-      \begin{cases}
-        | g a b c 0 | = | b | \\
-        | g a b c (n + 1) | = | k2 ((h a b c n, g a b c n), f a b c n) | 
-      \end{cases}\
-      \begin{cases}
-        | f a b c 0 | = | c | \\
-        | f a b c (n + 1) | = | l2 ((h a b c n, g a b c n), f a b c n) | 
-      \end{cases}
-\end{cases}
-\end{eqnarray*}
+%
+        |lcbr3(
+          lcbr(
+            h a b c 0  =  a
+          )(
+            h a b c (n + 1)  =  h2 ((h a b c n, g a b c n), f a b c n)
+          )
+     )(lcbr(
+            g a b c 0  =  b 
+          )(
+            g a b c (n + 1)  =  k2 ((h a b c n, g a b c n), f a b c n)
+          )   
+     )(lcbr(
+            f a b c 0 = c
+          )(
+            f a b c (n + 1) = l2 ((h a b c n, g a b c n), f a b c n)
+          )
+     )|
+%
+
 
 \just\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
 
@@ -1287,22 +1293,25 @@ aux a b c ((h,g),f)= a * h + b * g + c * f
 
 Voltando a substituir, mais uma vez, os valores na lei da recursividade mútua
 
-\begin{eqnarray*}
-\begin{cases}
-      \begin{cases}
-        | h a b c 0 | = | 1 | \\
-        | h a b c (n + 1) | = | aux ((h a b c n, g a b c n), f a b c n) | 
-      \end{cases}\
-      \begin{cases}
-        | g a b c 0 | = | 1 | \\
-        | g a b c (n + 1) | = | p1.p1 ((h a b c n, g a b c n), f a b c n) | 
-      \end{cases}\
-      \begin{cases}
-        | f a b c 0 | = | 0 | \\
-        | f a b c (n + 1) | = | p2.p1 ((h a b c n, g a b c n), f a b c n) | 
-      \end{cases}
-\end{cases}
-\end{eqnarray*}
+%
+        |lcbr3(
+          lcbr(
+            h a b c 0 = 1 
+          )(
+            h a b c (n + 1) = aux ((h a b c n, g a b c n), f a b c n)
+          )
+     )(lcbr(
+            g a b c 0 = 1
+          )(
+            g a b c (n + 1) = p1.p1 ((h a b c n, g a b c n), f a b c n)
+          )   
+     )(lcbr(
+            f a b c 0 = 0 
+          )(
+            f a b c (n + 1) = p2.p1 ((h a b c n, g a b c n), f a b c n) 
+          )
+     )|
+%
 
 
 | split (split h g) f | = | cata ( split (split ([1,aux]) ([1,p1.p1]) ) [0,p2.p1] |)
