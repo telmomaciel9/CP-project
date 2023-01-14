@@ -1196,10 +1196,10 @@ f a b c (n+3) = a * f a b c (n+2) + b * f a b c (n+1) + c * f a b c n
 Podemos concluir que 
 
 \begin{spec}
-        | g a b c n | = | f a b c (n + 1) | \\
-        | g a b c (n + 1) | = | f a b c (n + 2) | = | h a b c n | \\
-        | h a b c n | = | f a b c (n + 2) | \\
-        | h a b c (n + 1) | = | f a b c (n + 3) | = | h a b c n + g a b c n + f a b c n |  
+g a b c n =  f a b c (n + 1)  
+g a b c (n + 1)  =  f a b c (n + 2)  =  h a b c n  
+h a b c n  =  f a b c (n + 2) 
+h a b c (n + 1)  =  f a b c (n + 3)  =  h a b c n + g a b c n + f a b c n   
 \end{spec}
 
 
@@ -1257,7 +1257,7 @@ Substituindo na lei da recursividade mútua temos que
 %
 
 
-\just\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
+\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
 
 
 Em que 
@@ -1320,7 +1320,7 @@ Voltando a substituir, mais uma vez, os valores na lei da recursividade mútua
 \just\equiv{ definição de for b i }
 
 
-| split (split h g) f | = | for split (split aux (p1.p1) ) (p2.p1) ((1,1),0) |
+| split (split h g) f | = | for (split (split aux (p1.p1) ) (p2.p1)) ((1,1),0) |
 
 
 
