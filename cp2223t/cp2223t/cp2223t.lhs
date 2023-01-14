@@ -1129,7 +1129,7 @@ Começando por desenvolver a lei da recursividade mútua temos então
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = | cata ( split (split j k) l ) | }
+\just\equiv | split (split h g) f | = | cata ( split (split j k) l ) | 
 
 Desenvolvendo mais ainda
 
