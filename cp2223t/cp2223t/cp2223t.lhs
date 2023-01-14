@@ -1126,7 +1126,7 @@ Começando por desenvolver a lei da recursividade mútua temos então
           h . in = j . F (split (split h g) f) 
      )(
           g . in = k . F (split (split h g) f)
-     )\\(
+     )(
           f . in = l . F (split (split h g) f)
      )|
 %
@@ -1134,13 +1134,13 @@ Começando por desenvolver a lei da recursividade mútua temos então
 
 \begin{eqnarray*}
 \begin{cases}
-      | h . in | = | j . F (split (split h g) f) |\\
-      | g . in | = | k . F (split (split h g) f) |\\
-      | f . in | = | l . F (split (split h g) f) |
+      h . in = j . F |(split (split h g) f) |\\
+      g . in = k . F |(split (split h g) f) |\\
+      f . in = l . F |(split (split h g) f) |\\
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv { | split (split h g) f | = | cata ( split (split j k) l ) | }
+\equiv { | split (split h g) f | = | cata ( split (split j k) l ) | }
 
 Desenvolvendo mais ainda
 
@@ -1161,7 +1161,7 @@ Desenvolvendo mais ainda
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = | cata ( split (split ([j1,j2]) ([k1,k2]) ) [l1,l2] ) |}
+\equiv{ | split (split h g) f | = | cata ( split (split ([j1,j2]) ([k1,k2]) ) [l1,l2] ) |}
 
 O que por fim nos leva a 
 
@@ -1182,7 +1182,7 @@ O que por fim nos leva a
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
+\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
 
 
 Pegando na função original
