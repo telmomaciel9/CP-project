@@ -159,15 +159,15 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-Grupo nr. & 99 (preencher)
+Grupo nr. & 50
 \\\hline
-a11111 & Nome1 (preencher)
+a96394 & Ricardo Silva Machado Araújo
 \\
-a22222 & Nome2 (preencher)
+a96569 & Telmo José Pereira Maciel 
 \\
-a33333 & Nome3 (preencher)
+a97396 & Pedro Dantas da Cunha Pereira 
 \\
-a44444 & Nome4 (preencher, se aplicável)
+a97746 & Ricardo Lopes Lucena 
 \end{tabular}
 \end{center}
 
