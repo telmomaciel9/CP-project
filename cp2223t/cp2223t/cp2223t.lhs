@@ -1148,6 +1148,11 @@ Desenvolvendo mais ainda
           )(
             g . succ = k2 . split (split h g) j
           )   
+     )(lcbr(
+            f . const 0 = l1 
+          )(
+            f . succ = l2 . split (split h g) j
+          )
      )|
 %
 
