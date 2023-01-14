@@ -1242,7 +1242,7 @@ Substituindo na lei da recursividade mútua temos que
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = cataNat ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )}
+\just\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
 
 
 Em que 
@@ -1289,20 +1289,20 @@ split (split h g) f = cataNat ( split (split ([1,aux]) ([1,p1.p1]) ) [0,p2.p1] )
 \just\equiv{ lei da troca }
 
 
-split (split h g) f = cataNat ( [split (split 1 0) 0, split (split aux (p1.p1) ) p2.p1 ] )
+| split (split h g) f | = | cata ( [split (split 1 0) 0, split (split aux (p1.p1) ) p2.p1 ] |)
 
 
 
 \just\equiv{ propriedade ficha 3 }
 
 
-split (split h g) f = cataNat ( [ ((1,1),0), split (split aux (p1.p1) ) p2.p1 ] )
+|split (split h g) f| = |cata ( [ ((1,1),0), split (split aux (p1.p1) ) p2.p1 ] |)
 
 
 \just\equiv{ definição de for b i }
 
 
-split (split h g) f = for split (split aux (p1.p1) ) p2.p1 ((1,1),0)
+| split (split h g) f | =  |for split (split aux (p1.p1) ) p2.p1 ((1,1),0) |
 
 
 
