@@ -1123,15 +1123,13 @@ Começando por desenvolver a lei da recursividade mútua temos então
 
 \begin{eqnarray*}
 \begin{cases}
-      \begin{cases}
         | h . in | = | j . F split (split h g) f | \\
         | g . in | = | k . F split (split h g) f | \\
         | f . in | = | l . F split (split h g) f | \\
-      \end{cases}\
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = cataNat ( split (split j k) l )}
+\just\equiv{ | split (split h g) f | = cata ( split (split j k) l )}
 
 Desenvolvendo mais ainda
 
@@ -1140,11 +1138,11 @@ Desenvolvendo mais ainda
       \begin{cases} 
         | h . const 0 | = | j1 | \\
         | h . succ | = | j2 . split (split h g) j |
-      \end{cases}\
+      \end{cases}\\
       \begin{cases}
         | g . const 0 | = | k1 | \\
-        | g . succ | = | k2 . split (split h g) j |     
-      \end{cases}\
+        | g . succ | = | k2 . split (split h g) j |   
+      \end{cases}\\
       \begin{cases}
         | f . const 0 | = | l1 | \\
         | f . succ | = | l2 . split (split h g) j |
