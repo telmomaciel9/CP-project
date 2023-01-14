@@ -1195,26 +1195,13 @@ f a b c (n+3) = a * f a b c (n+2) + b * f a b c (n+1) + c * f a b c n
 
 Podemos concluir que 
 
-\begin{eqnarray*}
-\begin{cases}
+\begin{spec}
         | g a b c n | = | f a b c (n + 1) | \\
         | g a b c (n + 1) | = | f a b c (n + 2) | = | h a b c n | \\
         | h a b c n | = | f a b c (n + 2) | \\
         | h a b c (n + 1) | = | f a b c (n + 3) | = | h a b c n + g a b c n + f a b c n |  
-\end{cases}
-\end{eqnarray*}
+\end{spec}
 
-%
-        |lcbr4(
-          g a b c n  =  f a b c (n + 1)
-     )(
-          g a b c (n + 1)  =  f a b c (n + 2)  =  h a b c n
-     )(
-          h a b c n  =  f a b c (n + 2) 
-     )(
-          h a b c (n + 1)  =  f a b c (n + 3)  =  h a b c n + g a b c n + f a b c n
-     ) |
-%
 
 E substituindo valores obtemos
 
