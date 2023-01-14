@@ -1150,7 +1150,7 @@ Desenvolvendo mais ainda
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = cataNat ( split (split ([j1,j2]) ([k1,k2]) ) [l1,l2] )}
+\just\equiv{ | split (split h g) f | = | cata ( split (split ([j1,j2]) ([k1,k2]) ) [l1,l2] ) |}
 
 O que por fim nos leva a 
 
@@ -1171,7 +1171,7 @@ O que por fim nos leva a
 \end{cases}
 \end{eqnarray*}
 
-\just\equiv{ | split (split h g) f | = cataNat ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )}
+\just\equiv{ | split (split h g) f | = | cata ( split (split ([const a,j2]) ([const b,k2]) ) [const c,l2] )|}
 
 
 Pegando na função original
