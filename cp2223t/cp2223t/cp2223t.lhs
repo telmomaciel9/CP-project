@@ -1187,12 +1187,10 @@ Podemos concluir que
 
 \begin{eqnarray*}
 \begin{cases}
-      \begin{cases}
         | g a b c n | = | f a b c (n + 1) | \\
         | g a b c (n + 1) | = | f a b c (n + 2) | = | h a b c n | \\
         | h a b c n | = | f a b c (n + 2) | \\
-        | h a b c (n + 1) | = | f a b c (n + 3) | = | h a b c n + g a b c n + f a b c n |  \\
-      \end{cases}\
+        | h a b c (n + 1) | = | f a b c (n + 3) | = | h a b c n + g a b c n + f a b c n |  
 \end{cases}
 \end{eqnarray*}
 
