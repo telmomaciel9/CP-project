@@ -1315,7 +1315,14 @@ initial = ((1,1),0)
 wrap = p2
 \end{code}
 
+Por fim, apresentamos alguns testes de performance para concluir o quão mais rápida é a nossa implementação da fbl
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{cp2223t_media/ex1.png}
+  \caption{Comparações de performance entre f e fbl}
+  \label{fig:ex1}
+\end{figure}
 
 
 
