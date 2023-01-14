@@ -1123,11 +1123,11 @@ Começando por desenvolver a lei da recursividade mútua temos então
 \begin{eqnarray*}
 %
         |lcbr(
-          h . in | = | j . F (split (split h g) f) 
+          h . in = j . F (split (split h g) f) 
      )(
-          g . in | = | k . F (split (split h g) f)
+          g . in = k . F (split (split h g) f)
      )(
-          f . in | = | l . F (split (split h g) f)
+          f . in = l . F (split (split h g) f)
      )|
 %
 \end{eqnarray*}
