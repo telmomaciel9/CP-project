@@ -1347,8 +1347,6 @@ Gene de |tax|:
 \begin{code}
 gene = auxi . out 
 
-auxi = undefined
-
 auxi :: Either String (String,[String]) -> Either String (String,[[String]])
 auxi (Left x) = Left x 
 auxi (Right (a,l)) = Right (a, (groupBy(\x lista -> head(lista) == ' ') (map (drop 4) l)))
