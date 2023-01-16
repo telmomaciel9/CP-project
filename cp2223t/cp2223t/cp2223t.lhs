@@ -1367,6 +1367,24 @@ ajuntamento x y = x <> y
 \end{code}
 
 \subsection*{Problema 3}
+
+\begin{eqnarray}
+\xymatrix@@C=2cm{
+    |S x N|
+           \ar[d]_-{|cata(gr2l)|}
+           \ar[r]^-{|ParteQuadrado|}
+&
+    |S >< S x N|^
+           \ar[d]^{|id >< square|}
+\
+     |Rose S S|^*
+&
+     |S >< Rose)^*
+           \ar[l]^-{|inRos|}
+}
+\end{eqnarray*}
+
+
 \begin{code}
 squares = anaRose gsq
 
