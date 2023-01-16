@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.14)  16 JAN 2023 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.14)  16 JAN 2023 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,22 +1190,22 @@ Underfull \hbox (badness 10000) in alignment at lines 1081--1081
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1082.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1083.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1082.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1083.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1082.
+(hyperref)                removing `subscript' on input line 1083.
 
 
-LaTeX Warning: Citation `Ol18' on page 11 undefined on input line 1086.
-
-\openout4 = `cp2223t.ptb'.
+LaTeX Warning: Citation `Ol18' on page 11 undefined on input line 1087.
 
 \openout4 = `cp2223t.ptb'.
 
+\openout4 = `cp2223t.ptb'.
 
-LaTeX Warning: Citation `Ol18' on page 11 undefined on input line 1137.
+
+LaTeX Warning: Citation `Ol18' on page 11 undefined on input line 1138.
 
 \openout4 = `cp2223t.ptb'.
 
@@ -1220,7 +1220,7 @@ LaTeX Warning: Citation `Ol18' on page 11 undefined on input line 1137.
 
 
 
-LaTeX Warning: Citation `EK06' on page 12 undefined on input line 1232.
+LaTeX Warning: Citation `EK06' on page 12 undefined on input line 1233.
 
 \openout4 = `cp2223t.ptb'.
 
@@ -1269,69 +1269,69 @@ LaTeX Warning: Citation `EK06' on page 12 undefined on input line 1232.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1618 \equiv
+l.1619 \equiv
               { \ensuremath{\conj{\conj{\Varid{h}}{\Varid{g}}}{\Varid{f}}} =...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1619 
+l.1620 
        
 ? 
 ! Missing { inserted.
 <to be read again> 
                    \begingroup 
-l.1623 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
+l.1624 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
                                                   
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1623 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
+l.1624 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
                                                   
 ? 
 ! Missing { inserted.
 <to be read again> 
                    \begingroup 
-l.1623 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
+l.1624 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
                                                   
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1623 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
+l.1624 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
                                                   
 ? 
 ! Missing { inserted.
 <to be read again> 
                    \begingroup 
-l.1623 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
+l.1624 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
                                                   
 ? 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1623 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
+l.1624 ...rid{g}}}{\Varid{j}}\end{lcbr}\end{lcbr}}
                                                   
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1626 \equiv
+l.1627 \equiv
              { \ensuremath{\conj{\conj{\Varid{h}}{\Varid{g}}}{\Varid{f}}} = ...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1627 
+l.1628 
        
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1635 \equiv
+l.1636 \equiv
              { \ensuremath{\conj{\conj{\Varid{h}}{\Varid{g}}}{\Varid{f}}} = ...
 
 ? 
@@ -1339,7 +1339,7 @@ l.1635 \equiv
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1636 
+l.1637 
        
 ? 
 \openout4 = `cp2223t.ptb'.
@@ -1351,14 +1351,14 @@ l.1636
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1717 \equiv
+l.1718 \equiv
              { \ensuremath{\conj{\conj{\Varid{h}}{\Varid{g}}}{\Varid{f}}} = ...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1718 
+l.1719 
        
 ? 
 \openout4 = `cp2223t.ptb'.
@@ -1373,47 +1373,47 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1759 \just\equiv{ lei da troca }
+l.1760 \just\equiv{ lei da troca }
                                   
 ? 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1759 \just\equiv{ lei da troca }
+l.1760 \just\equiv{ lei da troca }
                                   
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1759 \just\equiv{ lei da troca }
+l.1760 \just\equiv{ lei da troca }
                                   
 ? 
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1759 \just\equiv{ lei da troca }
+l.1760 \just\equiv{ lei da troca }
                                   
 ? 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1759 \just\equiv{ lei da troca }
+l.1760 \just\equiv{ lei da troca }
                                   
 ? 
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1759 \just\equiv{ lei da troca }
+l.1760 \just\equiv{ lei da troca }
                                   
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1760 
+l.1761 
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1759--1760
+Underfull \hbox (badness 10000) in paragraph at lines 1760--1761
 
  []
 
@@ -1424,47 +1424,47 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1766 \just\equiv{ propriedade ficha 3 }
+l.1767 \just\equiv{ propriedade ficha 3 }
                                          
 ? 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1766 \just\equiv{ propriedade ficha 3 }
+l.1767 \just\equiv{ propriedade ficha 3 }
                                          
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1766 \just\equiv{ propriedade ficha 3 }
+l.1767 \just\equiv{ propriedade ficha 3 }
                                          
 ? 
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1766 \just\equiv{ propriedade ficha 3 }
+l.1767 \just\equiv{ propriedade ficha 3 }
                                          
 ? 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1766 \just\equiv{ propriedade ficha 3 }
+l.1767 \just\equiv{ propriedade ficha 3 }
                                          
 ? 
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1766 \just\equiv{ propriedade ficha 3 }
+l.1767 \just\equiv{ propriedade ficha 3 }
                                          
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1767 
+l.1768 
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1766--1767
+Underfull \hbox (badness 10000) in paragraph at lines 1767--1768
 
  []
 
@@ -1475,47 +1475,47 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1772 \just\equiv{ definição de for b i }
+l.1773 \just\equiv{ definição de for b i }
                                             
 ? 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1772 \just\equiv{ definição de for b i }
+l.1773 \just\equiv{ definição de for b i }
                                             
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1772 \just\equiv{ definição de for b i }
+l.1773 \just\equiv{ definição de for b i }
                                             
 ? 
 ! Misplaced alignment tab character &.
 \just #1#2->\\ &#1&
                     \rule {2em}{0pt} \{ \mbox {\rule [-.7em]{0pt}{1.8em} \sm...
-l.1772 \just\equiv{ definição de for b i }
+l.1773 \just\equiv{ definição de for b i }
                                             
 ? 
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.1772 \just\equiv{ definição de for b i }
+l.1773 \just\equiv{ definição de for b i }
                                             
 ? 
 ! Misplaced alignment tab character &.
 \just ...}{1.8em} \small #2 \/} \} \nonumber \\ &&
                                                    
-l.1772 \just\equiv{ definição de for b i }
+l.1773 \just\equiv{ definição de for b i }
                                             
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1773 
+l.1774 
        
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
+Underfull \hbox (badness 10000) in paragraph at lines 1773--1774
 
  []
 
@@ -1524,7 +1524,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
 <cp2223t_media/ex1.png, id=262, 1662.21pt x 345.29pt>
 File: cp2223t_media/ex1.png Graphic file (type png)
 <use cp2223t_media/ex1.png>
-Package pdftex.def Info: cp2223t_media/ex1.png  used on input line 1795.
+Package pdftex.def Info: cp2223t_media/ex1.png  used on input line 1796.
 (pdftex.def)             Requested size: 455.24411pt x 94.56778pt.
 \openout4 = `cp2223t.ptb'.
 
@@ -1579,7 +1579,7 @@ re/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf
 1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cp2223t.pdf (20 pages, 661722 bytes).
+Output written on cp2223t.pdf (20 pages, 661670 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  355 compressed objects within 4 object streams
