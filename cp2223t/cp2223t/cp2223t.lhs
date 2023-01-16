@@ -814,7 +814,6 @@ Os diagramas podem ser produzidos recorrendo à \emph{package} \LaTeX\
            \ar[l]^-{|g|}
 }
 \end{eqnarray*}
-
 \section{Regra prática para a recursividade mútua em |Nat0|}\label{sec:mr}
 
 Nesta disciplina estudou-se como fazer \pd{programação dinâmica} por cálculo,
