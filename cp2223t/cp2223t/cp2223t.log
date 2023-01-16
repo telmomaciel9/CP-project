@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.14)  14 JAN 2023 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.1.14)  16 JAN 2023 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1539,7 +1539,7 @@ Package pdftex.def Info: cp2223t_media/ex1.png  used on input line 1796.
 
 \openout4 = `cp2223t.ptb'.
 
- (./cp2223t.ind [18] [19
+ (./cp2223t.ind [18] [19] [20
 
 
 ])
@@ -1552,10 +1552,10 @@ Package rerunfilecheck Info: File `cp2223t.out' has not changed.
 (rerunfilecheck)             Checksum: 198FBAC9DCE1E7BFD94A43BA0836654E;1628.
  ) 
 Here is how much of TeX's memory you used:
- 15817 strings out of 480171
- 248667 string characters out of 5894489
+ 15828 strings out of 480171
+ 248818 string characters out of 5894489
  574196 words of memory out of 5000000
- 33402 multiletter control sequences out of 15000+600000
+ 33412 multiletter control sequences out of 15000+600000
  543017 words of font info for 187 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  67i,15n,77p,1187b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1579,10 +1579,10 @@ re/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf
 1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cp2223t.pdf (19 pages, 659883 bytes).
+Output written on cp2223t.pdf (20 pages, 661733 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 352 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

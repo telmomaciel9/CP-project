@@ -1809,11 +1809,11 @@ Gene de \ensuremath{\Varid{tax}}:
 \\[\blanklineskip]%
 \>[B]{}\Varid{auxi}\mathrel{=}\bot {}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\mbox{\onelinecomment auxi :: Either b (b,[b]) -> Either b (b,[[b]])}{}\<[E]%
+\>[B]{}\Varid{auxi}\mathbin{::}\Conid{String}+(\Conid{String},[\mskip1.5mu \Conid{String}\mskip1.5mu])\to \Conid{String}+(\Conid{String},[\mskip1.5mu [\mskip1.5mu \Conid{String}\mskip1.5mu]\mskip1.5mu]){}\<[E]%
 \\
-\>[B]{}\mbox{\onelinecomment auxi (Left x) = Left x }{}\<[E]%
+\>[B]{}\Varid{auxi}\;(i_1\;\Varid{x})\mathrel{=}i_1\;\Varid{x}{}\<[E]%
 \\
-\>[B]{}\mbox{\onelinecomment auxi (Right (a,(h:t)) ) = }{}\<[E]%
+\>[B]{}\Varid{auxi}\;(i_2\;(\Varid{a},\Varid{l}))\mathrel{=}i_2\;(\Varid{a},(\Varid{groupBy}\;(\lambda \Varid{x}\;\Varid{lista}\to \Varid{head}\;(\Varid{lista})\equiv \text{\ttfamily '~'})\;(\map \;(\Varid{drop}\;\mathrm{4})\;\Varid{l}))){}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
@@ -1822,23 +1822,76 @@ Função de pós-processamento:
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
-\>[B]{}\Varid{post}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{post}\mathbin{::}\Conid{Exp}\;\Conid{String}\;\Conid{String}\to [\mskip1.5mu [\mskip1.5mu \Conid{String}\mskip1.5mu]\mskip1.5mu]{}\<[E]%
+\\
+\>[B]{}\Varid{post}\;(\Conid{Var}\;\Varid{x})\mathrel{=}[\mskip1.5mu [\mskip1.5mu \Varid{x}\mskip1.5mu]\mskip1.5mu]{}\<[E]%
+\\
+\>[B]{}\Varid{post}\;(\Conid{Term}\;\Varid{y}\;\Varid{z})\mathrel{=}\Varid{ajuntamento}\;[\mskip1.5mu [\mskip1.5mu \Varid{y}\mskip1.5mu]\mskip1.5mu]\;(\Varid{concatMap}\;(\lambda \Varid{n}\to \map \;(\Varid{y}\mathbin{:})\;(\Varid{post}\;\Varid{n}))\;\Varid{z}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{ajuntamento}\mathbin{::}[\mskip1.5mu [\mskip1.5mu \Conid{String}\mskip1.5mu]\mskip1.5mu]\to [\mskip1.5mu [\mskip1.5mu \Conid{String}\mskip1.5mu]\mskip1.5mu]\to [\mskip1.5mu [\mskip1.5mu \Conid{String}\mskip1.5mu]\mskip1.5mu]{}\<[E]%
+\\
+\>[B]{}\Varid{ajuntamento}\;\Varid{x}\;\Varid{y}\mathrel{=}\Varid{x}\mathbin{<>}\Varid{y}{}\<[E]%
 \ColumnHook
 \end{hscode}\resethooks
 
 \subsection*{Problema 3}
 \begin{hscode}\SaveRestoreHook
 \column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{5}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{6}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{9}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{13}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{41}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{44}{@{}>{\hspre}l<{\hspost}@{}}%
 \column{E}{@{}>{\hspre}l<{\hspost}@{}}%
 \>[B]{}\Varid{squares}\mathrel{=}\lanabracket\;\!\Varid{gsq}\;\!\ranabracket_\textit{\tiny R}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{gsq}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{parteQuadrado}\;(((\Varid{x},\Varid{y}),\Varid{lar}),\mathrm{0})\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),[\mskip1.5mu \mskip1.5mu]){}\<[E]%
+\\
+\>[B]{}\Varid{parteQuadrado}\;(((\Varid{x},\Varid{y}),\Varid{lar}),\Varid{n})\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),[\mskip1.5mu {}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1})\mskip1.5mu]){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{gsq}{}\<[6]%
+\>[6]{}\mathrel{=}\Varid{parteQuadrado}{}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\Varid{rose2List}\mathrel{=}\llparenthesis\, \Varid{gr2l}\,\rrparenthesis_\textit{\tiny R}{}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{gr2l}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{gr2l}\mathrel{=}\Varid{cons}\comp (\Varid{id}\times\Varid{concat}){}\<[E]%
 \\[\blanklineskip]%
-\>[B]{}\Varid{carpets}\mathrel{=}\bot {}\<[E]%
+\>[B]{}\Varid{geraQuadrado}\;\Varid{n}\mathrel{=}(\Varid{sierpinski}\;(\Varid{base},\Varid{n}){}\<[41]%
+\>[41]{},\Varid{n}){}\<[E]%
+\\
+\>[B]{}\hsindent{5}{}\<[5]%
+\>[5]{}\mathbf{where}{}\<[E]%
+\\
+\>[5]{}\hsindent{4}{}\<[9]%
+\>[9]{}\Varid{base}\mathrel{=}((\mathrm{0},\mathrm{0}),\mathrm{32}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{carpets}\mathrel{=}\anaList{(\Varid{id}+\Varid{geraQuadrado}){}\<[44]%
+\>[44]{}\comp \Varid{outNat}}{}\<[E]%
 \\[\blanklineskip]%
 \>[B]{}\Varid{present}\mathrel{=}\bot {}\<[E]%
 \ColumnHook
