@@ -1349,29 +1349,52 @@ gene = auxi . out
 
 auxi = undefined
 
---auxi :: Either b (b,[b]) -> Either b (b,[[b]])
---auxi (Left x) = Left x 
---auxi (Right (a,(h:t)) ) = 
+auxi :: Either String (String,[String]) -> Either String (String,[[String]])
+auxi (Left x) = Left x 
+auxi (Right (a,l)) = Right (a, (groupBy(\x lista -> head(lista) == ' ') (map (drop 4) l)))
 
 \end{code}
 
 Função de pós-processamento:
 
 \begin{code}
-post = undefined
+
+post :: Exp String String -> [[String]]
+post (Var x) = [[x]]
+post (Term y z) = ajuntamento [[y]] (concatMap (\n -> map (y:) (post n)) z)
+
+ajuntamento :: [[String]] -> [[String]] -> [[String]]
+ajuntamento x y = x <> y
+
 \end{code}
 
 \subsection*{Problema 3}
 \begin{code}
 squares = anaRose gsq
 
-gsq = undefined
+parteQuadrado (((x,y),lar),0) = (((x+lar/3, y+lar/3),lar/3),[])
+parteQuadrado (((x,y),lar),n) = (((x+lar/3, y+lar/3),lar/3), [
+            (((x+2*lar/3,y+lar/3),lar/3),n-1),
+            (((x+2*lar/3,y+2*lar/3),lar/3),n-1),
+            (((x+lar/3,y+2*lar/3),lar/3),n-1),
+            (((x+2*lar/3,y),lar/3),n-1),
+            (((x,y+2*lar/3),lar/3),n-1),
+            (((x+lar/3,y),lar/3),n-1),
+            (((x,y+lar/3),lar/3),n-1),
+            (((x,y),lar/3),n-1) ])
+
+gsq  = parteQuadrado
 
 rose2List = cataRose gr2l 
 
-gr2l = undefined
+gr2l = cons . (id><concat)
 
-carpets = undefined
+geraQuadrado n = ( sierpinski (base,n)  , n)
+    where
+        base = ((0, 0), 32)
+
+
+carpets = anaList ( (id -|- geraQuadrado)  . outNat)
 
 present = undefined
 \end{code}
