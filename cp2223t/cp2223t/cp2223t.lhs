@@ -1376,7 +1376,7 @@ ajuntamento x y = x <> y
 &
     |S >< S x N|^
            \ar[d]^{|id >< square|}
-\
+\\
      |Rose S S|^*
 &
      |S >< Rose)^*
