@@ -1834,14 +1834,67 @@ Função de pós-processamento:
 
 \subsection*{Problema 3}
 
-\begin{eqnarray*}
-\xymatrix@C=2cm{
-    \ensuremath{\Conid{S}\times\N_0}
-           \ar[d]_-{\ensuremath{\Conid{Square}}}
-           \ar[r]^-{Rose Square\ensuremath{\mskip1.5mu\}\mathbin{\&}}S >< (S >< Nat0)\ensuremath{\mathbin{\uparrow}\lambda \Varid{ar}\;[\mskip1.5mu \Varid{d}\mskip1.5mu]\mathbin{\uparrow}\{\mskip1.5mu }id >< Square\ensuremath{\mathbin{\uparrow}\mskip1.5mu\}\lambda }Rose S\ensuremath{\mathbin{\&}}S >< Rose S)\ensuremath{\mathbin{\uparrow}\lambda \Varid{ar}\;[\mskip1.5mu \Varid{l}\mskip1.5mu]\mathbin{\char94 -}\{\mskip1.5mu }inRose\ensuremath{\mskip1.5mu\}\mskip1.5mu\}\lambda \Varid{end}\;\{\mskip1.5mu \Varid{eqnarray}\mathbin{*}\mskip1.5mu\}\lambda \Varid{begin}\;\{\mskip1.5mu \Varid{code}\mskip1.5mu\}\;\Varid{squares}\mathrel{=}\lanabracket\;\!\Varid{gsq}\;\!\ranabracket_\textit{\tiny R}\;\Varid{parteQuadrado}\;(((\Varid{x},\Varid{y}),\Varid{lar}),\mathrm{0})\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),[\mskip1.5mu \mskip1.5mu])\;\Varid{parteQuadrado}\;(((\Varid{x},\Varid{y}),\Varid{lar}),\Varid{n})\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),[\mskip1.5mu (((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),(((\Varid{x},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1})\mskip1.5mu])\;\Varid{gsq}\mathrel{=}\Varid{parteQuadrado}\;\Varid{rose2List}\mathrel{=}\llparenthesis\, \Varid{gr2l}\,\rrparenthesis_\textit{\tiny R}\;\Varid{gr2l}\mathrel{=}\Varid{cons}\comp (\Varid{id}\times\Varid{concat})\;\Varid{geraQuadrado}\;\Varid{n}\mathrel{=}(\Varid{sierpinski}\;(\Varid{base},\Varid{n}),\Varid{n})\;\mathbf{where}\;\Varid{base}\mathrel{=}((\mathrm{0},\mathrm{0}),\mathrm{32})\;\Varid{carpets}\mathrel{=}\anaList{(\Varid{id}\mathbin{-}}}- geraQuadrado)  . outNat)
-
-present = undefined
-\end{code}
+\begin{hscode}\SaveRestoreHook
+\column{B}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{5}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{6}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{9}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{13}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{41}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{44}{@{}>{\hspre}l<{\hspost}@{}}%
+\column{E}{@{}>{\hspre}l<{\hspost}@{}}%
+\>[B]{}\Varid{squares}\mathrel{=}\lanabracket\;\!\Varid{gsq}\;\!\ranabracket_\textit{\tiny R}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{parteQuadrado}\;(((\Varid{x},\Varid{y}),\Varid{lar}),\mathrm{0})\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),[\mskip1.5mu \mskip1.5mu]){}\<[E]%
+\\
+\>[B]{}\Varid{parteQuadrado}\;(((\Varid{x},\Varid{y}),\Varid{lar}),\Varid{n})\mathrel{=}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),[\mskip1.5mu {}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x},\Varid{y}\mathbin{+}\mathrm{2}\mathbin{*}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x},\Varid{y}\mathbin{+}\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1}),{}\<[E]%
+\\
+\>[B]{}\hsindent{13}{}\<[13]%
+\>[13]{}(((\Varid{x},\Varid{y}),\Varid{lar}\mathbin{/}\mathrm{3}),\Varid{n}\mathbin{-}\mathrm{1})\mskip1.5mu]){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{gsq}{}\<[6]%
+\>[6]{}\mathrel{=}\Varid{parteQuadrado}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{rose2List}\mathrel{=}\llparenthesis\, \Varid{gr2l}\,\rrparenthesis_\textit{\tiny R}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{gr2l}\mathrel{=}\Varid{cons}\comp (\Varid{id}\times\Varid{concat}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{geraQuadrado}\;\Varid{n}\mathrel{=}(\Varid{sierpinski}\;(\Varid{base},\Varid{n}){}\<[41]%
+\>[41]{},\Varid{n}){}\<[E]%
+\\
+\>[B]{}\hsindent{5}{}\<[5]%
+\>[5]{}\mathbf{where}{}\<[E]%
+\\
+\>[5]{}\hsindent{4}{}\<[9]%
+\>[9]{}\Varid{base}\mathrel{=}((\mathrm{0},\mathrm{0}),\mathrm{32}){}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{carpets}\mathrel{=}\anaList{(\Varid{id}+\Varid{geraQuadrado}){}\<[44]%
+\>[44]{}\comp \Varid{outNat}}{}\<[E]%
+\\[\blanklineskip]%
+\>[B]{}\Varid{present}\mathrel{=}\bot {}\<[E]%
+\ColumnHook
+\end{hscode}\resethooks
 
 \subsection*{Problema 4}
 \subsubsection*{Versão não probabilística}
