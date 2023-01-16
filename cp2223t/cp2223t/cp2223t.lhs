@@ -1368,7 +1368,7 @@ ajuntamento x y = x <> y
 
 \subsection*{Problema 3}
 
-\begin{eqnarray}
+\begin{eqnarray*}
 \xymatrix@@C=2cm{
     |S x N|
            \ar[d]_-{|cata(gr2l)|}
