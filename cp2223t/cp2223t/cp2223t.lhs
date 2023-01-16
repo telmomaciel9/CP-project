@@ -1369,21 +1369,21 @@ ajuntamento x y = x <> y
 \subsection*{Problema 3}
 
 {--
---\begin{eqnarray*}
---\xymatrix@@C=2cm{
---    |S >< Nat0|
---           \ar[d]_-{|Square|}
---           \ar[r]^-{Rose Square|}
---&
---    |S >< (S >< Nat0)|^
---           \ar[d]^{|id >< Square|^}
---\
---     |Rose S|
---&
---     |S >< Rose S)|^
---           \ar[l]^-{|inRose|}
---}
---\end{eqnarray*}
+\begin{eqnarray*}
+\xymatrix@@C=2cm{
+    |S >< Nat0|
+           \ar[d]_-{|Square|}
+           \ar[r]^-{Rose Square|}
+&
+    |S >< (S >< Nat0)|^
+           \ar[d]^{|id >< Square|^}
+\
+     |Rose S|
+&
+     |S >< Rose S)|^
+           \ar[l]^-{|inRose|}
+}
+\end{eqnarray*}
 --}
 
 
