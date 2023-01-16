@@ -1370,17 +1370,17 @@ ajuntamento x y = x <> y
 
 \begin{eqnarray*}
 \xymatrix@@C=2cm{
-    |S x N|
-           \ar[d]_-{|cata(gr2l)|}
-           \ar[r]^-{|ParteQuadrado|}
+    |S >< Nat0|
+           \ar[d]_-{|Square|}
+           \ar[r]^-{Rose Square|}
 &
-    |S >< S x N|^
-           \ar[d]^{|id >< square|}
-\\
-     |Rose S S|^*
+    |S >< (S >< Nat0)|^
+           \ar[d]^{|id >< Square|^}
+\
+     |Rose S|
 &
-     |S >< Rose)^*
-           \ar[l]^-{|inRos|}
+     |S >< Rose S)|^
+           \ar[l]^-{|inRose|}
 }
 \end{eqnarray*}
 
