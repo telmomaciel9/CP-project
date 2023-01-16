@@ -159,15 +159,15 @@
 
 \begin{center}\large
 \begin{tabular}{ll}
-Grupo nr. & 50
+Grupo nr. & 99 (preencher)
 \\\hline
-a96394 & Ricardo Silva Machado Araújo
+a11111 & Nome1 (preencher)
 \\
-a96569 & Telmo José Pereira Maciel 
+a22222 & Nome2 (preencher)
 \\
-a97396 & Pedro Dantas da Cunha Pereira 
+a33333 & Nome3 (preencher)
 \\
-a97746 & Ricardo Lopes Lucena 
+a44444 & Nome4 (preencher, se aplicável)
 \end{tabular}
 \end{center}
 
@@ -814,6 +814,7 @@ Os diagramas podem ser produzidos recorrendo à \emph{package} \LaTeX\
            \ar[l]^-{|g|}
 }
 \end{eqnarray*}
+
 \section{Regra prática para a recursividade mútua em |Nat0|}\label{sec:mr}
 
 Nesta disciplina estudou-se como fazer \pd{programação dinâmica} por cálculo,
